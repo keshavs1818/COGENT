@@ -1,0 +1,117 @@
+# Question 1
+   a) private int bookNo;
+      # Getter Method
+      public int getbookNo() {
+           return this.bookNo;
+      }
+      # Setter Method
+      public void setbookNo(int bookNo) {
+           this.bookNo = bookNo;
+      }
+   b) private String title;
+      # Getter Method
+      public String getTitle() {
+           return this.title;
+      }
+      # Setter Method
+      public void setTitle(String t) {
+           this.title = t;
+      }
+   c) private String author;
+      # Getter Method
+      public String getAuthor() {
+           return this.author;
+      }
+      # Setter Method
+      public void setAuthor(String author) {
+           this.author = author;
+      }
+   d) private float price;
+      # Getter Method
+      public float getPrice() {
+           return this.price;
+      }
+      # Setter Method
+      public void setPrice(int price) {
+           this.price = price;
+      }
+# Question 2-5
+import java.util.Scanner;
+public class BookDetails {
+     public String title;
+     public float price;
+
+     # Question 3
+     private static int bookCount;
+     public static int getBookCount() {
+         return this.bookCount;
+     static {
+        bookCount = 0;
+     }
+     bookCount += 1;
+
+     # Question 2
+     public Book(String t, float p) {
+         if(title.length() < 4 || (price < 1 || price > 5000)) {
+             System.out.println("ERROR");
+         } else {
+             this.title = title;
+             this.price = p;
+         }
+     }
+
+     public String toString() {
+          return "Title: " + this.title + " Price: " + this.price;
+
+     public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);
+
+           # Question 4
+           Book[] arr = new Book[3];
+           String tit1 = sc.nextString();
+           float price1 = sc.nextFloat();
+           while(tit1.length() < 4 || (price1 < 1 || price1 > 5000)) {
+              tit1 = sc.nextString();
+              price1 = sc.nextFloat();
+           Book b1 = new Book(tit1, price1);
+           arr[0] = b1;
+
+           String tit2 = sc.nextString();
+           float price2 = sc.nextFloat();
+           while(tit2.length() < 4 || (price2 < 1 || price2 > 5000)) {
+              tit2 = sc.nextString();
+              price2 = sc.nextFloat();
+           Book b2 = new Book(tit2, price2);
+           arr[1] = b2;
+
+           String tit3 = sc.nextString();
+           float price3 = sc.nextFloat();
+           while(tit3.length() < 4 || (price3 < 1 || price3 > 5000)) {
+              tit3 = sc.nextString();
+              price3 = sc.nextFloat();
+           Book b3 = new Book(tit3, price3);
+           arr[2] = b3;
+
+           # Question 5
+           int number = sc.nextInt();
+           if(number < 0 || number > 2) {
+              System.out.println("ERROR");
+           } else {
+              System.out.println(arr[number].toString());
+           }
+     }
+}
+
+# Question 6
+public class EngineeringBook extends Book {
+     private String category;
+     public String getCategory() {
+         return this.category;
+     public void setCategory(String category) {
+         this.category = category;
+     }
+     public static void main(String[] args) {
+         EngineeringBook eb = new EngineeringBook();
+     }
+}
+      
