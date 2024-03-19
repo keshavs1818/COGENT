@@ -1,0 +1,80 @@
+# Number 1: Prime
+public static boolean isPrime(int n) {
+    int count = 0;
+    for(int i = 2; i < n; i++) {
+        if(n % i == 0) {
+           count++;
+        }
+    }
+    return count == 0;
+}
+
+# Number 2: Palindromic Number
+public static String reverse(String s) {
+    String reversed_Str = "";
+    for(int i = s.length() - 1; i >= 0; i--) {
+        reversed_Str += s.charAt(i);
+    }
+    return reversed_Str;
+}
+public static boolean isPalindromic(int number) {
+    String number = Integer.toString(number);
+    return reverse(number).equals(number);
+}
+
+# Number 3: Swap Two Numbers With A Third Variable
+public static void swap(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+# Number 4: Prime Factors
+public static boolean isPrime(int n) {
+    int count = 0;
+    for(int i = 2; i < n; i++) {
+        if(n % i == 0) {
+           count++;
+        }
+    }
+    return count == 0;
+}
+public static void primeFactors(int n) {
+    for(int i = 2; i < n; i++) {
+        if(n % i == 0 && isPrime(i)) {
+             System.out.println(i);
+        }
+    }
+}
+
+# Number 5: Reversing An Integer
+public static int reverseInteger(int n) {
+    String newStr = "";
+    while(n > 0) {
+       newStr += Integer.toString(n % 10);
+       n /= 10;
+    }
+    return Integer.parseInt(newStr);
+}
+
+# Number 6: Removes any given character from String
+public static String removeCertainChar(char c, String s) {
+    String string_wo_char = "";
+    for(int i = 0; i < s.length(); i++) {
+        if(s.charAt(i) != c) {
+           string_wo_char += s.charAt(i);
+        }
+    }
+}
+
+# Number 7: Count occurrence of given character in String
+public static String charCountOccurrence(char c, String s) {
+    int count = 0;
+    for(int i = 0; i < s.length(); i++) {
+        if(s.charAt(i) == c) {
+            count++;
+        }
+    }
+    return count;
+}
+     
