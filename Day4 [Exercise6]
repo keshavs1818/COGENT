@@ -1,0 +1,19 @@
+abstract class Employee {
+    private static String name;
+    private static int age;
+    private static String department;
+    private static double salary;
+
+    abstract void job();
+}
+
+public class Manager extends Employee{
+    public static void job() {
+         
+    }
+}
+
+public static void main(String[] args) {
+    Manager m1 = new Manager();
+    m1.job();
+}
