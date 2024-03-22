@@ -1,0 +1,66 @@
+# Question 1
+import java.util.*;
+import java.io.*;
+
+public class Student {
+    # PART A
+    private ArrayList<String> names = new ArrayList<String>();
+
+    # PART B
+    public void setNames() {
+        Scanner sc = new Scanner(System.in);
+        while(sc.nextLine()) {
+            String s = sc.nextString();
+            names.add(s);
+        }
+    }
+
+    # PART C
+    public String searchName(int index) {
+        if(index < 0 || index >= names.size()) {
+            return "Please input a valid index.";
+        } 
+        return names.get(index);
+    }
+
+    # PART D
+    public String searchName(String name) {
+        for(String n : names) {
+            if(n.equals(name)) {
+                return "Found";
+            } else {
+                return "Not found";
+            }
+        }
+    }
+
+    # PART E
+    public void printNames() {
+        Iterator iterator = name.iterator();
+        while(iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+    # PART F
+    public void removeName(String stuName) {
+       names.remove(new String(stuName));
+    }
+}
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.setNames();
+        System.out.println(s.names);
+        s.searchName("Richard");
+        System.out.println(s.names);
+        s.searchIndex(1);
+        System.out.println(s.names);
+        s.printNames();
+        System.out.println(s.names);
+        s.removeName("Richard");
+        System.out.println(s.names);
+    }
+}
+        
