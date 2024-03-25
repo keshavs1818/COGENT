@@ -1,1 +1,48 @@
+import java.util.Scanner;
+public class Customer {
+   private int custNo;
+   private String custName;
+   private String custAddr;
 
+   public Customer() {
+       this.custNo = 0;
+       this.custName = "";
+       this.custAddr = "";
+   }
+
+   public Customer(int cnumber, String cname, String ca) {
+       this.custNo = cnumber;
+       this.custName = cname;
+       this.custAddr = ca;
+   }
+       
+}
+
+public class CustomerReport {
+    ArrayList<Customer> custList = new ArrayList<Customer>();
+
+    public void addCustomer(Customer c) {
+        custList.add(c);
+    }
+
+    public void printList() {
+        for(Customer c: custList) {
+            System.out.print(c.custNo + " " + c.custName + " " + c.custAddr);
+        }
+    }
+}
+
+public class PizzaHut {
+    ArrayList<Customer> custList = new ArrayList<Customer>();
+    int i = 0;
+    Scanner sc = new Scanner(System.in);
+    while(i < 5) {
+       int a = sc.nextInt();
+       String b = sc.nextString();
+       String c = sc.nextString();
+       Customer cust = new Customer(a, b, c);
+       CustomerReport.addCustomer(cust);
+       i += 1;
+    }
+    CustomerReport.printList();
+}
