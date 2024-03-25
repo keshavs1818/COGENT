@@ -1,0 +1,48 @@
+ public class Customer {
+    private int custNo;
+    private String custName;
+    private String custAddr;
+    public int getCustNo() {
+        return this.custNo;
+    }
+    public String getCustName() {
+        return this.custName;
+    }
+    public String getCustAddress() {
+        return this.custAddr;
+    }
+    public void setCustNo(int cn) {
+        this.custNo = cn;
+    }
+    public void setCustName(String cn) {
+        this.custName = cn;
+    }
+    public void setCustAddress(String ca) {
+        this.custAddr = ca;
+    }
+    public void init() {
+        this.custNo = 46;
+        this.custName = "Keshav";
+        this.custAddr = "302 Sundew Drive Morganville, NJ 07751";
+    }
+    public void display() {
+        System.out.println("Customer Number: " + this.custNo);
+        System.out.println("Customer Name: " + this.custName);
+        System.out.println("Customer Address: " + this.custAddr);
+    }
+}
+
+public class PizzaHut {
+    public static void main(String[] args) {
+        Customer c = new Customer();
+        c.init();
+        c.display();
+        c.getCustNo();
+        c.getCustName();
+        c.getCustAddress();
+        c.setCustNo(46);
+        c.setCustName("Ram");
+        c.setCustAddress("456 Maple Lane Marlboro, NJ 07746");
+    }
+}
+
