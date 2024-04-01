@@ -1,0 +1,46 @@
+List<Integer> numbers = new ArrayList<Integer>();
+numbers.add(4);
+numbers.add(5);
+numbers.add(3);
+numbers.add(2);
+numbers.add(1);
+    	
+// Question 1
+numbers.stream().filter((num) -> String.valueOf(num).startsWith("1")).forEach(System.out::println);
+    	
+// Question 2
+numbers.stream().filter((num) -> num % 2 == 0).forEach(System.out::println);
+    	
+// Question 3
+List<Integer> duplicates = numbers.stream()
+                                  .collect(Collectors.groupingBy(e -> e, Collectors.counting()))
+                                  .entrySet().stream()
+                                  .filter(entry -> entry.getValue() > 1)
+                                  .map(entry -> entry.getKey())
+                                  .collect(Collectors.toList());
+// Question 4
+public class Multiplication extends Thread {
+   @Override
+   public void run() {
+    	for(int i = 1; i <= 10; i++) {
+    		 System.out.println(2 * i);
+    	}
+   }
+   public class a {
+    	public static void main(String[] args) throws Exception {
+    		 Multiplication st1 = new Multiplication();
+    		 st1.start();
+    	   }
+    	}
+    	
+// Question 5
+public class SimpleThread extends Thread {
+   @Override
+   public void run() {
+    	System.out.println("Multithreading is a feature of Java.");
+   }
+   public class a {
+    	public static void main(String[] args) throws Exception {
+    		 SimpleThread st1 = new SimpleThread();
+    		 st1.start();
+    	   }
