@@ -1,1 +1,27 @@
+public class Address {
+    private int aid;
+    private String street;
+    private String city;
+    private int zipCode;
+}
+
+public class Employees {
+    private int aid;
+    private String street;
+    private String city;
+    private int zipCode;
+}
+
+@Configuration
+public class EmployeeInfo {
+    @Bean
+    public Employee employee() {
+       return new Employee(address());
+    }
+    @Bean
+    public Address address() {
+       return new Address();
+    }
+}
+
 
