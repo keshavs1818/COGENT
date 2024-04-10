@@ -6,10 +6,22 @@ public class Address {
 }
 
 public class Employees {
-    private int aid;
-    private String street;
-    private String city;
-    private int zipCode;
+    private int id;
+    private String name;
+    private String age;
+
+    # Constructor Based Injection
+    public Employee(Address address) {
+        this.address = address;
+    }
+
+    # Property Based Injection
+    private Address address;
+
+    # Setter Based Injection
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }
 
 @Configuration
