@@ -1,4 +1,4 @@
-public class Employee {
+ public class Employee {
     private int id;
     private String name;
     private int age;
@@ -36,3 +36,18 @@ public class Employee {
         this.salary = salary;
     }
 }
+
+# Part A
+HTTP GET http://localhost:8080/employees
+
+# Part B
+HTTP GET http://localhost:8080/employees/{1}
+
+# Part C
+HTTP POST http://localhost:8080/employees/
+
+# Part D
+HTTP PUT http://localhost:8080/employees/
+
+# Part E
+HTTP DELETE http://localhost:8080/employees/
